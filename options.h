@@ -24,7 +24,6 @@ struct PngToGbaOptions {
 };
 
 struct PngToNtrOptions {
-    char *cellFilePath;
     int numTiles;
     int bitDepth;
     int colsPerChunk;
@@ -39,11 +38,11 @@ struct PngToNtrOptions {
     bool vramTransfer;
     int mappingType;
     bool convertTo4Bpp;
+    char *cellFilePath;
 };
 
 struct NtrToPngOptions {
     char *paletteFilePath;
-    char *cellFilePath;
     int bitDepth;
     bool hasTransparency;
     int width;
@@ -54,6 +53,7 @@ struct NtrToPngOptions {
     bool handleEmpty;
     bool convertTo8Bpp;
     int paletteRow;
+    char *cellFilePath;
 };
 
 struct CellVramTransferData {
